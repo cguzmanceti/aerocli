@@ -816,9 +816,10 @@ void print_export(aq5_data_t *aq_data, aq5_settings_t *aq_sett)
 
 		}
 	for (int n=0; n<AQ5_NUM_FLOW; n++) {
-		if (aq_data->flow[n] != AQ5_FLOAT_UNDEF)
+		if (aq_data->flow[n] != AQ5_FLOAT_UNDEF) {
 			printf("FLOW%d_NAME='%s'\n", n+1, libaquaero5_get_name(NAME_FLOW, n));
 			printf("FLOW%d=%.1f\n", n+1, aq_data->flow[n]);
+		}
 	}
 
 	for (int n=0; n<AQ5_NUM_LEVEL; n++) {
